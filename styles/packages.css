@@ -1,0 +1,65 @@
+/* === Packages Section === */
+.packages-section {
+  background-color: #f9f9f9;
+  color: #1a1a1a;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.packages-intro {
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+.packages-intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.packages-intro p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* === Grid Layout === */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === Individual Package Cards === */
+.package-item {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.package-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.package-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #1a1a1a;
+}
+
+.package-item p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+.package-item .price {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #d4af37;
+}

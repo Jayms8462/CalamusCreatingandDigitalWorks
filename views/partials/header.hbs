@@ -1,12 +1,20 @@
 <header class="site-header">
   <div class="nav-container">
-    <a href="/pages/index.html" class="logo">
-    <img src="/assets/LogoDark.png" alt="Calamus Creative Solutions Logo" />
+    <a href="/" class="logo">
+      <img src="/assets/LogoDark.png" alt="Calamus Creative Solutions Logo" />
     </a>
+
     <nav class="nav-links">
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/services">Services</a></li>
+
+        <li class="dropdown">
+          <a href="/services">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="/services/packages">Packages & Pricing</a></li>
+          </ul>
+        </li>
+
         <li><a href="/portfolio">Portfolio</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/contact">Contact</a></li>

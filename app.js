@@ -45,6 +45,11 @@ app.get('/login', (req, res) => {
   res.render('pages/login', { title: 'Login' });
 });
 
+app.get('/services/packages', (req, res) => {
+  res.render('pages/packages');
+});
+
+
 // Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
