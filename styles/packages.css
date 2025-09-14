@@ -63,3 +63,19 @@
   font-weight: bold;
   color: #d4af37;
 }
+
+.custom-package {
+  grid-column: 1 / -1; /* Forces it to span the full row */
+}
+
+.package-details {
+  text-align: left;
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+  color: #333;
+}
+
+.package-details li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
