@@ -1,0 +1,52 @@
+.site-header {
+  background-color: #1a1a1a;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 12px 1.5rem;
+  box-sizing: border-box;
+}
+
+.logo img {
+  height: 48px;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d4af37;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
