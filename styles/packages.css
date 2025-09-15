@@ -79,3 +79,57 @@
   margin-bottom: 0.5rem;
   line-height: 1.5;
 }
+
+.monthly-support-header {
+  background-color: #f0f0f0;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.monthly-support-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.monthly-support-header .price-list {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #ddd;
+  padding: 0.25rem 0;
+}
+
+.price-row .price {
+  font-weight: bold;
+  color: #d4af37;
+}
+
+.monthly-packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.package-item .rate {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.package-item .rate strong {
+  color: #d4af37;
+}
+
