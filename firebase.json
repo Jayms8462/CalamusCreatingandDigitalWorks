@@ -5,17 +5,16 @@
   },
   "hosting": [
     {
-      "target": "prod",
+      "site": "calamuscreative-901e1",
       "public": "public",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    },
+    {
+      "site": "calamuscreative-preview",
+      "public": ".",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-      "rewrites": [{ "source": "**", "function": "app" }],
-      "headers": [
-        {
-          "source": "**",
-          "headers": [
-            { "key": "Strict-Transport-Security", "value": "max-age=31556926; includeSubDomains; preload" }
-          ]
-        }
+      "rewrites": [
+        { "source": "**", "function": "app" }
       ]
     }
   ]

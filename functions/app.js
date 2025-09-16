@@ -4,13 +4,12 @@ const path = require('path');
 
 const app = express();
 
-// Serve static assets BEFORE routes
-app.use(express.static(path.join(__dirname, 'public')));
+// Serve static assets
 app.use('/styles', express.static(path.join(__dirname, 'styles')));
 app.use('/exec', express.static(path.join(__dirname, 'exec')));
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
-// Set up Handlebars view engine
+// Handlebars setup
 app.engine('hbs', exphbs.engine({
   extname: 'hbs',
   defaultLayout: 'main',
