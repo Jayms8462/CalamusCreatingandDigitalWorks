@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "calamuscreative-901e1"
+  },
+  "targets": {
+    "calamuscreative-901e1": {
+      "hosting": {
+        "prod": [
+          "calamuscreative-901e1"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
