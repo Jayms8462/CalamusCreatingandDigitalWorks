@@ -1,135 +1,41 @@
-/* === Packages Section === */
-.packages-section {
-  background-color: #f9f9f9;
-  color: #1a1a1a;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.packages-intro {
-  max-width: 800px;
-  margin: 0 auto 3rem auto;
-}
-
-.packages-intro h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.packages-intro p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #333;
-}
-
-/* === Grid Layout === */
-.packages-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* === Individual Package Cards === */
 .package-item {
-  background-color: white;
+  border: 2px solid #ddd;
   border-radius: 8px;
   padding: 2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: #fff;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.package-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+.package-item.featured {
+  border-color: #d4af37;
+  background: #fffdf7;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
 }
 
-.package-item h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
-  color: #1a1a1a;
+.package-cta {
+  margin-top: 1.5rem;
+  background: #d4af37;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
 }
 
-.package-item p {
+.package-cta:hover {
+  background: #b8902c;
+}
+
+.service-price {
+  float: right;
+  font-weight: bold;
+  color: #d4af37;
+}
+
+.package-savings {
+  margin-top: 1rem;
   font-size: 1rem;
-  line-height: 1.5;
-  color: #555;
-}
-
-.package-item .price {
-  margin-top: 1rem;
-  font-size: 1.25rem;
   font-weight: bold;
-  color: #d4af37;
+  color: #2a2a2a;
 }
-
-.custom-package {
-  grid-column: 1 / -1; /* Forces it to span the full row */
-}
-
-.package-details {
-  text-align: left;
-  margin: 1rem 0;
-  padding-left: 1.2rem;
-  color: #333;
-}
-
-.package-details li {
-  margin-bottom: 0.5rem;
-  line-height: 1.5;
-}
-
-.monthly-support-header {
-  background-color: #f0f0f0;
-  padding: 2rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.monthly-support-header h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.monthly-support-header .price-list {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.price-row {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.1rem;
-  border-bottom: 1px solid #ddd;
-  padding: 0.25rem 0;
-}
-
-.price-row .price {
-  font-weight: bold;
-  color: #d4af37;
-}
-
-.monthly-packages-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.package-item .rate {
-  margin-top: 1rem;
-  font-size: 1.1rem;
-  color: #333;
-}
-
-.package-item .rate strong {
-  color: #d4af37;
-}
-

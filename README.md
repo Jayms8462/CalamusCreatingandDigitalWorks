@@ -6,4 +6,4 @@ firebase deploy --only hosting:prod
 
 Non-Prod
 With github checkout to your branch and deploy a preview webpage using 
-firebase deploy --only hosting:preview
+firebase deploy --only functions,hosting

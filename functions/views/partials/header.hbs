@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="nav-container">
     <a href="/" class="logo">
-      <img src="/assets/LogoDark.png" alt="Calamus Creative Solutions Logo" />
+      <img src="/functions/assets/LogoDark.png" alt="Calamus Creative Solutions Logo" />
     </a>
 
     <nav class="nav-links">
@@ -18,7 +18,35 @@
         <li><a href="/portfolio">Portfolio</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/contact">Contact</a></li>
-        <li><a href="/login">Login</a></li>
+
+        <!-- Login dropdown trigger -->
+        <li id="login-wrapper" class="login-dropdown-wrapper">
+          <a href="#" id="login-toggle">Login</a>
+          <div id="login-dropdown" class="login-dropdown">
+            <form id="login-form-inline">
+              <input type="email" id="email-inline" placeholder="Email" required />
+              <input type="password" id="password-inline" placeholder="Password" required />
+              <button type="submit">Login</button>
+            </form>
+            <p class="signup-link">Don’t have an account? <a href="/signup">Sign up</a></p>
+          </div>
+        </li>
+
+        <!-- Dashboard dropdown (hidden by default) -->
+        <!-- Dashboard dropdown (hidden by default) -->
+        <li id="dashboard-wrapper" class="hidden">
+          <a href="#" id="user-dashboard-toggle">User Dashboard</a>
+          <ul id="user-dashboard-menu" class="dropdown-menu">
+            <!-- Always visible -->
+            <li><a href="/dashboard">My Dashboard</a></li>
+            <li><a href="#" id="logout-link">Logout</a></li>
+
+            <!-- Admin-only items (hidden by default, shown by navbar.js if role === 'admin') -->
+            <li id="admin-users-link" class="hidden"><a href="/admin/users">Manage Users</a></li>
+            <li id="admin-services-link" class="hidden"><a href="/admin/services">Manage Services</a></li>
+            <li id="admin-billing-link" class="hidden"><a href="/admin/billing">Billing & Payments</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
 

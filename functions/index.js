@@ -1,4 +1,5 @@
-const functions = require("firebase-functions");
+const { onRequest } = require("firebase-functions/v2/https");
+const logger = require("firebase-functions/logger");
 const app = require("./app");
 
-exports.app = functions.https.onRequest(app);
+exports.app = onRequest({ region: "us-central1" }, app);

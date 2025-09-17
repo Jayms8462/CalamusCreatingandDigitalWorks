@@ -48,4 +48,12 @@ app.get('/services/packages', (req, res) => {
   res.render('pages/packages', { title: 'Packages & Pricing' });
 });
 
+app.get('/dashboard', (req, res) => {
+  res.render('pages/dashboard', { title: 'Dashboard' });
+});
+
+app.get('/signup', (req, res) => {
+  res.render('pages/signup', { title: 'Sign Up' });
+});
+
 module.exports = app;

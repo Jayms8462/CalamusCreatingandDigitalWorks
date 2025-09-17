@@ -22,7 +22,7 @@
 }
 
 /* === Navigation === */
-.nav-links ul {
+.nav-links > ul {
   list-style: none;
   display: flex;
   gap: 2rem;
@@ -30,8 +30,8 @@
   padding: 0;
 }
 
-.nav-links li {
-  position: relative;
+.nav-links > ul > li {
+  position: relative; /* ensures dropdown is anchored */
 }
 
 .nav-links a {
@@ -42,23 +42,15 @@
 }
 
 .nav-links a:hover {
-  color: #d4af37; /* Gold accent on hover */
-  background-color: transparent; /* Prevent background shift */
+  color: #d4af37;
+  background-color: transparent;
 }
 
-/* === Dropdown === */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu.show {
-  display: block;
-}
-
+/* === Dropdown (Services) === */
 .dropdown-menu {
-  display: none !important;
-  position: absolute;
-  top: 100%;
+  display: none;              /* hidden by default */
+  position: absolute;         /* take it out of flex flow */
+  top: 100%;                  /* right below parent */
   left: 0;
   background-color: #222;
   border-radius: 4px;
@@ -66,14 +58,9 @@
   min-width: 200px;
   z-index: 1000;
   white-space: nowrap;
+  margin: 0;                  /* no extra spacing */
 }
 
-/* Show only on hover */
-.dropdown:hover .dropdown-menu {
-  display: block !important;
-}
-
-/* Prevent layout shift */
 .dropdown-menu li {
   list-style: none;
 }
@@ -90,6 +77,11 @@
   color: #d4af37;
 }
 
+/* JS toggles this */
+.dropdown-menu.show {
+  display: block;
+}
+
 /* === Hamburger (for future mobile use) === */
 .hamburger {
   display: none;
@@ -103,4 +95,107 @@
   background: white;
   margin: 4px 0;
   transition: 0.4s;
+}
+
+/* === Login Dropdown === */
+.login-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #222;
+  border-radius: 4px;
+  padding: 1rem;
+  min-width: 220px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 999;
+  color: #fff;
+}
+
+.login-dropdown form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.login-dropdown input {
+  padding: 0.5rem;
+  border: 1px solid #444;
+  border-radius: 3px;
+  background-color: #333;
+  color: #fff;
+}
+
+.login-dropdown input::placeholder {
+  color: #aaa;
+}
+
+.login-dropdown button {
+  background-color: #d4af37;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.login-dropdown button:hover {
+  background-color: #b8902c;
+}
+
+.login-dropdown.show {
+  display: block;
+}
+
+.signup-link {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.signup-link a {
+  color: #d4af37;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* === Dashboard Dropdown === */
+.dashboard-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #222;
+  border-radius: 4px;
+  padding: 0.5rem 0;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+.dashboard-dropdown li {
+  list-style: none;
+}
+
+.dashboard-dropdown a {
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.dashboard-dropdown a:hover {
+  background-color: #444;
+  color: #d4af37;
+}
+
+.dashboard-dropdown.show {
+  display: block;
+}
+
+.hidden {
+  display: none !important;
 }
